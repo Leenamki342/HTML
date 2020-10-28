@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+</head>
+<body>
+    <h1>회원가입 폼 입니다.</h1>
+    <form action="signup.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email"> <br/>
+        <label for="psw">비밀번호</label>
+        <input type="password" id="psw" name="psw"> <br/>
+        <fieldset>
+            <legend>성별 정보 선택</legend> <!-- 네모박스의 제목을 붙이는 요소명 -->
+            <label> <!-- 체크박스나 라디오를 사용할 땐 자식요소로 input을 사용해서 for을 생략한다.-->
+                <input type="radio" name="gender" value="man" checked/> 남자
+            </label> <!-- radio 는 하나만을 선택하는 속성값, checked 는 처음화면에 체크되는 속성값 -->
+            <label>
+                <input type="radio" name="gender" value="woman" /> 여자
+            </label>
+            <label>
+                <input type="radio" name="gender" value="no" /> 모름
+            </label>
+            <br/>        
+        </fieldset>
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label>
+                <input type="checkbox" name="hobby" value="piano"/> 피아노
+            </label> <!-- checkbox 는 여러개를 선택하는 속성값 -->
+            <label>
+                <input type="checkbox" name="hobby" value="carom"/> 당구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="beer"/> 맥주
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="etc"/> 기타
+            </label>
+        </fieldset>
+        <label for="job">직업선택</label>
+        <select name="job" id="job"> <!-- select 는 하나의 선택 셀이 생기고 그안에 카테고리가 정렬되어있음 -->
+            <option value="">선택</option> <!-- "" 는 빈 문자열이고 " " 는 공백이다.(다름) -->
+            <option value="teacher">선생님</option>
+            <option value="doctor">의사</option>
+            <option value="developer">개발자</option>
+            <option value="etc">기타</option>
+        </select>
+        <br/>
+        <label for="lunch">점심</label>
+        <select name="lunch" id="lunch" multiple> <!-- multiple 은 ctrl을 누르고 여러개 선택할 수 있음-->
+            <option value="">선택</option>
+            <option value="m1">짬뽕</option>
+            <option value="m2">자장면</option>
+            <option value="m3">군만두</option>
+            <option value="m4">탕수육</option>
+        </select>
+        <button type="submit">가입</button>
+        <button type="reset">취소</button>
+    </form>
+</body>
+</html>

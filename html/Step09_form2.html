@@ -9,9 +9,9 @@
     <h1>회원가입 폼 입니다.</h1>
     <form action="signup.jsp">
         <label for="email">이메일</label>
-        <input type="text" id="email" name="email"> <br/>
+        <input type="text" id="email" name="email"/> <br/>
         <label for="psw">비밀번호</label>
-        <input type="password" id="psw" name="psw"> <br/>
+        <input type="password" id="psw" name="psw"/> <br/>
         <fieldset>
             <legend>성별 정보 선택</legend> <!-- 네모박스의 제목을 붙이는 요소명 -->
             <label> <!-- 체크박스나 라디오를 사용할 땐 자식요소로 input을 사용해서 for을 생략한다.-->
@@ -51,12 +51,34 @@
         <br/>
         <label for="lunch">점심</label>
         <select name="lunch" id="lunch" multiple> <!-- multiple 은 ctrl을 누르고 여러개 선택할 수 있음-->
-            <option value="">선택</option>
-            <option value="m1">짬뽕</option>
-            <option value="m2">자장면</option>
-            <option value="m3">군만두</option>
-            <option value="m4">탕수육</option>
+            <option>선택</option> <!-- option 요소에 value 가 없으면 innertext가 value 값으로 넘어간다.-->
+            <option>짬뽕</option>
+            <option>자장면</option>
+            <option>군만두</option>
+            <option>탕수육</option>
+        </select> 
+        <br/>
+        <label for="coffee">음료 선택</label>
+        <select name="coffee" id="coffee">
+            <optgroup label="에스프레소"> <!-- 선택이 용이하도록 카테고리 역할을 담당함 -->
+                <option>아메리카노</option>
+                <option>카페라떼</option>
+                <option>카페모카</option>
+            </optgroup>
+            <optgroup label="프라프치노">
+                <option>카라멜 프라프치노</option>
+                <option>자바칩 프라프치노</option>
+                <option>오랜지 프라프치노</option>
+            </optgroup>
         </select>
+        <br/>
+        <label for="file">첨부 파일</label>
+        <input type="file" id="file" name="file"/>
+        <br/>
+
+        <label for="comment">하고 싶은 말</label> <br/>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea><!-- textarea는 메모장같은 네모칸을 생성하는 것 -->
+        <br/>
         <button type="submit">가입</button>
         <button type="reset">취소</button>
     </form>

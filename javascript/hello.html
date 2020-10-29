@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello.html</title>
+</head>
+<body>
+    <p id="one" 
+        onclick="document.querySelector('#one').innerText='안녕히 가세요';">
+    안녕하세요</p>
+    <p id="two"
+        onmouseover="document.querySelector('#two').innerText='빠이';">
+    어쩌구...</p>
+    <p id="three" onmouseover="a();">저쩌구...</p> <!-- "a();" 는 a라는 함수를 실행하는 명령어이다. -->
+    <script>
+        function a(){ /* 함수(function)는 일괄 실행 예정인 javascript를 모와둘수 있다. function 뒤에 오는 것은 함수 이름이다. */
+            document.querySelector("#three").innerText="해골";
+            document.querySelector("#three").style.color="red";
+            document.querySelector("#three").style.fontSize="100px";
+        }
+    </script>
+    <!--
+        아래 버튼을 클릭하면 id 가 result 로 지정된 p 요소에 
+        "버튼을 클릭했네?" 라고 출력해 보기
+    -->
+    <button onclick="b();">눌러보셈</button>
+    <p id="result">
+        <script>
+            function b(){
+                document.querySelector('#result').innerText="버튼을 클릭했네?";
+            }
+        </script>
+    </p>
+    
+    <button onmouseover="c();">눌러봐</button>
+    <p id="four">
+        <script>
+            function c(){
+                document.querySelector('#four').innerText="하잉";
+            }
+        </script>
+    </p>
+
+</body>
+</html>

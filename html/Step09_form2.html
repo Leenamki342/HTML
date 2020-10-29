@@ -44,14 +44,14 @@
         <select name="job" id="job"> <!-- select 는 하나의 선택 셀이 생기고 그안에 카테고리가 정렬되어있음 -->
             <option value="">선택</option> <!-- "" 는 빈 문자열이고 " " 는 공백이다.(다름) -->
             <option value="teacher">선생님</option>
-            <option value="doctor">의사</option>
+            <option value="doctor" selected>의사</option> <!-- selected 를 이런식으로 사용하면 checked 처럼 첫 화면 설정값으로 지정된다. -->
             <option value="developer">개발자</option>
             <option value="etc">기타</option>
         </select>
         <br/>
         <label for="lunch">점심</label>
         <select name="lunch" id="lunch" multiple> <!-- multiple 은 ctrl을 누르고 여러개 선택할 수 있음-->
-            <option>선택</option> <!-- option 요소에 value 가 없으면 innertext가 value 값으로 넘어간다.-->
+            <option>선택</option> <!-- option 요소에 value 가 없으면 innertext가 value 값으로 넘어간다.--> 
             <option>짬뽕</option>
             <option>자장면</option>
             <option>군만두</option>

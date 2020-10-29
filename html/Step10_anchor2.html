@@ -17,19 +17,28 @@
     </style>
 </head>
 <body>
+    <script> <!--javascript 영역(로딩할 때)-->
+        alert('페이지 로딩중...'); 
+    </script>
     <div class="container">
         <h1>anchor 의 다른 기능</h1>
-        <ul>
+        <ul> <!-- 책갈피 기능 -->
             <li><a href="#one">one </a></li>
             <li><a href="#two">two </a></li>
             <li><a href="#three">three </a></li>
-        </ul>
+            <!-- javascript 실행(링크를 누를 때) -->
+            <li><a href="javascript:alert('hello~');">눌러봐</a></li>
+            <!-- 모바일 기기에서 테스트 가능한 기능 -->
+            <li><a href="tel:010-1111-2222">전화걸기</a></li> 
+            <li><a href="mailto:aaa@naver.com">이메일 쓰기</a></li>
+        </ul> <!-- 책갈피를 설정한다. -->
         <div class="spacer"></div>
         <p id="one">one 입니다.</p>
         <div class="spacer"></div>
         <p id="two">two 입니다.</p>
         <div class="spacer"></div>
         <p id="three">three 입니다.</p>
+        <div class="spacer"></div>
     </div>
 </body>
 </html>

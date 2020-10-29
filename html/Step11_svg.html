@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step11_svg.html</title>
+    <style>
+        .container{
+            width: 768px;
+            /* 위, 아래 마진 : 0 좌, 우 마진 : auto*/
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>이미지를 벡터 그래픽(svg)으로 만들어서 사용할 수 있다.</h1>
+        <img src="images/circle.svg" />
+        <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+            <g>
+             <title>background</title>
+             <rect fill="#fff" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+             </g>
+            </g>
+            <g>
+             <title>Layer 1</title>
+             <path id="svg_24" d="m263,261.45313l0,-24.45313l-29,0l0,35l52,1l-2,-58l-65,-1l0,84l84,3l-1,-103l-104,-2l-1,122l128,3l0,-146l-147,-1l-1,175l174,7" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#529d94"/>
+            </g>
+        </svg>
+        
+    </div>
+</body>
+</html>

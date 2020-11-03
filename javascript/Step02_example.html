@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example.html</title>
+</head>
+<body>
+    <h1>산술연산 예제</h1>
+    <input type="text" id="num1" placeholder="숫자 입력..."/>
+    <button onclick="plus()">+</button>
+    <input type="text" id="num2" placeholder="숫자 입력..."/>
+    <span>=</span>
+    <strong id="result">0</strong> <!-- 여기서 innerText 값은 초기값을 말함 -->
+    <script>
+        function plus(){ // 함수 안에 넣어 둔 값들은 호출을 하기 전엔 출력되지 않음
+
+            // 1. id 가 num1 인 input 요소에 입력한 value 값 읽어오기
+            var a = document.querySelector("#num1").value; // 읽어온 값을 변수 a에 잠시 보관
+
+            // 2. id 가 num2 인 input 요소에 입력한 value 값 읽어오기
+            var b = document.querySelector("#num2").value; // 읽어온 값을 변수 b에 잠시 보관
+
+            // 3. 위에서 읽어온 두값을 + 연산해서 결과값 얻어내기
+            var c = parseFloat(a) + parseFloat(b); // result라는 값에 산수가 완료된 값을 넣음
+            // parseFloat는 문자값을 실수값으로 바꿔준다.
+
+            // 4. 얻어낸 결과값을 id 가 result 인 요소에 innerText 로 넣어주기
+            document.querySelector("#result").innerText = c; // = 은 우측에 있는 값을 왼쪽에 대입하는 것이기 때문에 방향성을 잘 생각해야 함.
+
+
+        }
+    </script>
+</body>
+</html>

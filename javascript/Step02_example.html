@@ -12,6 +12,7 @@
     <button onclick="minus()">-</button>
     <button onclick="multiply()">*</button>
     <button onclick="division()">/</button>
+    <button onclick="equal()">==</button>
     <input type="text" id="num2" placeholder="숫자 입력..."/>
     <span>=</span>
     <strong id="result">0</strong> <!-- 여기서 innerText 값은 초기값을 말함 -->
@@ -55,6 +56,10 @@
             document.querySelector("#result").innerText = ff;
         }
 
+        function equal(){
+            var aaa = parseFloat(document.querySelector("#num1").value) == parseFloat(document.querySelector("#num2").value)
+            document.querySelector("#result").innerText = aaa;
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_object3.html</title>
+</head>
+<body>
+    <script>
+        var car1={
+            name:"소나타", 
+            color:"silver", 
+            drive:function(){ // 함수를 호출하기 위해선 car1.drive(); 이렇게 console 창에 입력하면 된다.
+                alert(this.name+" 이(가) 달려요."); // this 란 car1 을 지정하는 예약어다.
+            }
+        };
+        var car2={
+            name:"산타페", 
+            color:"white", 
+            drive:function(){
+                alert(this.name+" 이(가) 달려요.");
+            }
+        };
+        var car3={};
+        car3.name="포터";
+        car3.color="blue";
+        car3.drive=function(){
+            alert(car3.name+" 이(가) 달려요.");
+        };
+    </script>
+</body>
+</html>

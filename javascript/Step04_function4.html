@@ -6,6 +6,32 @@
     <title>Step04_function4.html</title>
 </head>
 <body>
-    
+    <script>
+        function a(){ // undefined 로 return
+            console.log("a() 함수 호출됨");
+        }
+
+        function b(){ // 10 으로 return
+            console.log("b() 함수 호출됨");
+            return 10;
+        }
+
+        function c(){ // "kim" 으로 return
+            console.log("c() 함수 호출됨");
+            return "kim";
+        }
+
+        function d(){ // 참조값 return
+            console.log("d() 함수 호출됨");
+            let obj={num:1, name:"김구라", addr:"노량진"};
+            return obj;
+        }
+
+        // d().num => 1 호출
+        // d().name => "김구라" 호출
+        // d().addr => "노량진" 호출
+
+        // d => function type / d() => object type / d().num => number type
+    </script>
 </body>
 </html>

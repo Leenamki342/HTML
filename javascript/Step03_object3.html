@@ -7,11 +7,12 @@
 </head>
 <body>
     <script>
-        var car1={
+        // 이중 예약어에 해당되는 명령어는 var, function, this 가 해당된다.
+        var car1={ 
             name:"소나타", 
             color:"silver", 
             drive:function(){ // 함수를 호출하기 위해선 car1.drive(); 이렇게 console 창에 입력하면 된다.
-                alert(this.name+" 이(가) 달려요."); // this 란 car1 을 지정하는 예약어다.
+                alert(this.name+" 이(가) 달려요."); // this 란 car1 이라는 object 를 지정하는 예약어다.
             }
         };
         var car2={
@@ -25,8 +26,17 @@
         car3.name="포터";
         car3.color="blue";
         car3.drive=function(){
-            alert(car3.name+" 이(가) 달려요.");
+            alert(this.name+" 이(가) 달려요.");
         };
+        // car1 object 의 특정방 참조
+        var a=car1.name;
+        var b=car1.color;
+        // car2 object 의 특정방 참조
+        var c=car2.name;
+        var d=car2.color;
+        // car1, car2 object 에 있는 drive() 함수 호출
+        car1.drive();
+        car2.drive();
     </script>
 </body>
 </html>

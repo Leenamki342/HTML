@@ -16,8 +16,9 @@
             var a=document.querySelector("#inputName").value;
 
             // 2. welcome() 함수 호출하면서 전달하기
-            welcome(a);
-
+            //welcome(a);
+            welcome2(a);
+            
             // 3. id 가 inputName 인 요소에 입력한 문자열 지우기
             document.querySelector("#inputName").value="";
 
@@ -30,6 +31,10 @@
             alert(arg+" 님 환영합니다.");
         }
 
+        // 위와 같은 동작을 하는 함수를 아래와 같이 정의할수도 있다.
+        var welcome2=function(arg){
+            alert(arg+" 님 환영합니다.");
+        }
     </script>
 </body>
 </html>

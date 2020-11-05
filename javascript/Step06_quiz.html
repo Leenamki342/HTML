@@ -47,7 +47,8 @@
         */
         
         function printToList(){ 
-
+            // ul 의 자식 요소를 모두 삭제
+            document.querySelector("#nameList").innerText="";
             // 0. 배열의 방 갯수만큼 li가 만들어져야 한다.
             for(let i=0; i<names.length; i++){
 

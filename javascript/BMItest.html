@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만도 계산기</title>
+    <style>
+        h1{
+            background-color: cornsilk;
+            color: brown;
+            font-size: 100px;
+        }
+        div{
+            color: burlywood;
+            font-size: 40px;
+        }
+        input{
+            font-size: 20px;
+        }
+        p{
+            font-size: 40px;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <h1>비만도 계산기</h1>
+    <div>비만도를 측정하고 다이어트 시작합시다!!</div>
+    <br/>
+    <input type="text" id="Tall" placeholder="키를 입력하세요">
+    <input type="text" id="Weight" placeholder="몸무게를 입력하세요">
+    <button id="BMI">비만도 확인</button>
+    <p id="BMICheck"></p>
+    <script>
+        
+        /*
+        비만도 계산기
+        < 몸무게/(키*0.01) >
+        저체중 : 18.5 미만
+        정상 : 18.5 이상 23 미만
+        과체중 : 23 이상 25 미만
+        비만 : 25 이상 30 미만
+        고도비만 : 30 이상
+        */
+
+        document.querySelector("#BMI").addEventListener("click", function(){
+            var a=document.querySelector("#Tall").value;
+            var b=document.querySelector("#Weight").value;
+            var d=(a*0.01)*(a*0.01);
+            var c=b/d
+
+            if(c < 18.5){
+                document.querySelector("#BMICheck").innerText="저체중 입니다.";
+            }
+            else if(c >= 18.5 && c < 23){
+                document.querySelector("#BMICheck").innerText="정상체중 입니다.";
+            }
+            else if(c >= 23 && c < 25){
+                document.querySelector("#BMICheck").innerText="과체중 입니다.";
+            }
+            else if(c >= 25 && c < 30){
+                document.querySelector("#BMICheck").innerText="비만 입니다.";
+            }
+            else{
+                document.querySelector("#BMICheck").innerText="고도비만 입니다.";
+            }
+
+        });
+
+    </script>
+</body>
+</html>

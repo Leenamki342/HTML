@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_createElement3.html</title>
+</head>
+<body>
+    <h1>반복문 돌면서 요소 만들기</h1>
+    <button id="showBtn">출력하기</button>
+    <h1>친구 목록 입니다.</h1>
+    <ul id="one">
+
+    </ul>
+    <script>
+        /*
+            출력하기 버튼을 누르면
+            아래의 friends 배열에 있는 내용을 순서대로
+            ul 요소에 추가하기.
+            단, li 요소를 만들어서 innerText 에 출력하기.
+        */
+
+        let friends=["김구라", "해골", "주뎅이", "원숭이", "덩어리"];
+
+        // 1. 클릭하면 실행되는 이벤트 생성
+        document.querySelector("#showBtn").addEventListener("click", function(){
+            // 2. 순서대로 출력되는 반복문 생성
+            for(i=0; i<friends.length; i++){
+                // 3. li 요소 생성하기
+                var a=document.createElement("li");
+                // 4. li 요소 innerText 에 출력값 넣기
+                a.innerText=friends[i];
+                // 5. ul 요소안에 li 요소 추가하기
+                document.querySelector("#one").append(a);
+            }
+        });
+    </script>
+</body>
+</html>

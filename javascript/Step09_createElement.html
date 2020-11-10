@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_createElemnet.html</title>
+    <style>
+        .my-class{
+            /* class="my-class" 속성을 가지고 있는 요소에 적용할 css  */
+            background-color: aquamarine;
+            color: red;
+            width: 120px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>원하는 요소를 동적으로 만들기</h1>
+    <div id="one">
+
+    </div>
+    <script>
+        /*
+            1. 아래와 같은 모양의 요소를 javascript 로 만들기
+
+            <p class = "my-class"> p1 요소 입니다. </p>
+
+            2. 만든 요소를 id 가 one 인 요소의 자식 요소로 추가하기
+        */
+
+        var p1=document.createElement("p"); // 요소명만 입력가능 "p" / "div" / "a" / "ul"
+        p1.innerText="p1 요소 입니다.";
+        // 속성값을 지정 ("class / id / herf ..." , "속성명" )
+        p1.setAttribute("class", "my-class"); //p1.className="my-class";
+        document.querySelector("#one").append(p1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_createElement4.html</title>
+</head>
+<body>
+    <h1>다양한 구조의 요소 만들기</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <td>주소</td>
+            </tr>
+        </thead>
+        <tbody id="one">
+            
+        </tbody>
+    </table>
+    <script>
+        let obj={name:"김구라", addr:"노량진"};
+        /*
+            <tbody id="one">
+                <tr>
+                    <td>김구라</td>
+                    <td>노량진</td>
+                <tr>
+            </tbody>
+        */
+        
+        // 1. td 요소를 만들고 name 과 addr 를 각각 따로 넣기
+        let a=document.createElement("td");
+        let b=document.createElement("td");
+        a.innerText=obj.name;
+        b.innerText=obj.addr;
+        // 2. tr 요소를 만들고 td 요소를 안에 넣기
+        let c=document.createElement("tr");
+        c.append(a);
+        c.append(b);
+        // 3. id 가 one 인 tbody 안에 tr 요소 넣기
+        document.querySelector("#one").append(c);
+    </script>
+</body>
+</html>

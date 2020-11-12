@@ -5,18 +5,18 @@
 	<title>Step08_PseudoElement.html</title>
 	<style>
 		/* 가상요소 선택자 */
-		p:first-letter{
+		p:first-letter{ /* p요소의 첫번째 글자 */
 			font-weight: bold;
 			color: red;
 		}
-		#one:first-line{
+		#one:first-line{ /* id가 one인 요소의 첫번째 줄 */
 			background-color: yellow;
 		}
-		.quote:before{
+		.quote:before{ /* 맨 첫번째 글자 앞에 문자를 입력하고 스타일 지정 가능 */
 			content:"'";
 			color: red;
 		}
-		.quote:after{
+		.quote:after{ /* 맨뒷 글자 뒤에 문자를 입력하고 스타일 지정 가능 */
 			content:"'";
 			color: blue;
 		}

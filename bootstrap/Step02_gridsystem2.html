@@ -51,6 +51,8 @@
         <!-- ex) col-md-6 => 화면의 50% 를 뜻하고 / col-md-3 => 화면의 25% 를 뜻한다. -->
         <!-- 아래와 같이 다른 크기의 col 이 있을 땐 xl > lg > md > sm 순으로 우선순위가 정해진다. -->
         <div class="row"> 
+            <!-- md 와 lg 둘 다 해당될 땐(992px 이상일 때) lg 의 지정값대로 출력이 되고
+            md 의 구간(768px 이상 992px 미만)에선 md 의 지정값으로 출력된다. -->
             <div class="col-md-6 col-lg-3"><img src="images/image1.png"/></div>
             <div class="col-md-6 col-lg-3"><img src="images/image2.png"/></div>
             <div class="col-md-6 col-lg-3"><img src="images/image3.png"/></div>

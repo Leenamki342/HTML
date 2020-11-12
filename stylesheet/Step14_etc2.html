@@ -10,7 +10,8 @@
 			background-color: yellow;
 			border: 1px solid green;
 			color: white;
-			overflow: visible; /* default 값 */
+			overflow: visible; /* default 값 / visible 은 기본 값
+			/ hidden 은 아예 없어지게함*/
 		}
 		#one{
 			width: 500px;
@@ -25,11 +26,12 @@
 			color: white;
 			/* 
 				넘친 컨텐츠 처리
-				visible | hidden | scroll | auto
+				visible(요소와 상관없이 내용을 다 출력함) | hidden 
+				| scroll(스크롤창) | auto(넘치면 스크롤창, 안넘치면 visible)
 
-				overflow, overflow-x, overflow-y
+				overflow, overflow-x(가로방향으로 넘치는거), overflow-y(세로방향으로 넘치는거)
 			*/
-			overflow: scroll; 
+			overflow: auto; 
 		}
 		#two{
 			width: 100px;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_gridsystem3.html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <style>
+        .row{ 
+            height: 200px;
+            background-color: aquamarine
+        };
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>수직 정렬 테스트</h1>
+        <!-- align-items-start = 맨위 / align-items-end = 맨아래 / center = 중간 -->
+        <div class="row border align-items-center">
+            <div class="col border bg-light">col1</div>
+            <div class="col border bg-warning">col2</div>
+            <div class="col border bg-info">col3</div>
+        </div>
+        <h1>칼럼 자신이 정렬하기</h1>
+        <!-- col 에 align-self-xxx 를 붙여서 하나씩 따로 정렬 -->
+        <div class="row border">
+            <div class="col order-last bg-light align-self-start">col1</div>
+            <div class="col order bg-warning align-self-center">col2</div>
+            <div class="col order-first bg-info align-self-end">col3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -33,7 +33,7 @@
             </div>
             <button type="submit" class="btn btn-outline-secondary">가입</button>
         </form>
-        <h1>폼 검증 상태 표시(실제 동착)</h1>
+        <h1>폼 검증 상태 표시(실제 동작)</h1>
         <form class="needs-validation"></form>
             <div class="form-group">
                 <label for="nick">명령어</label>
@@ -44,19 +44,21 @@
             </div>
             <button type="submit" class="btn btn-priamry">저장</button>
     </div>
-    <!-- 재확인 !!!!! -->
     <script>
-        document.querySelector("#nick").addEventListener("input", function(){
-            let inputNick=this.value;
-            this.classList.remove("is-invalid")
-            this.classList.remove("is-valid")
-            if(inputNick.length < 2 ){
-                this.classList.add("is-invalid");
-            }
-            else{
-                this.classList.add("is-valid");
-            }
-        });
+        document.querySelector("#nick")
+            .addEventListener("input", function(){
+                //입력한 별명 읽어오기
+                let inputNick=this.value;
+                //일단 클래스를 먼저 제거하고
+                this.classList.remove("is-invalid");
+                this.classList.remove("is-valid");
+                //만일 2글자 미만으로 입력 했다면 
+                if(inputNick.length < 2){
+                    this.classList.add("is-invalid");
+                }else{//2글자 이상 입력 했다면 
+                    this.classList.add("is-valid");
+                }
+            });
     </script>
 </body>
 </html>

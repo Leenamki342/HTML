@@ -12,8 +12,8 @@
         <form action="">
             <div class="form-group">
                 <label>아이디</label>
-                <input type="text" class="form-control">
-                <span class="form-text text-primary">
+                <input type="text" class="form-control"/>
+                <span class="form-text text-muted">
                     영문자로 시작하고 숫자를 조합해 주세요.
                 </span>
             </div>
@@ -25,24 +25,26 @@
                 <label>이메일</label>
                 <input type="text" class="form-control is-invalid"/>
                 <div class="valid-feedback">
-                    잘 입력 했습니다.
+                    잘 입력 했습니당.
                 </div>
                 <div class="invalid-feedback">
-                    이메일 형식에 맞게 입력하기.
+                    이메일 형식에 맞게 입력 하쇼.
                 </div>
             </div>
             <button type="submit" class="btn btn-outline-secondary">가입</button>
         </form>
+
         <h1>폼 검증 상태 표시(실제 동작)</h1>
-        <form class="needs-validation"></form>
+        <form action="" class="needs-validation">
             <div class="form-group">
-                <label for="nick">명령어</label>
-                <input type="text" id="nick" class="form-conto0p">
-                <div class="invalid-feedbk">
+                <label for="nick">별명 입력</label>
+                <input type="text" id="nick" class="form-control"/>
+                <div class="invalid-feedback">
                     2글자 이상 입력하세요
                 </div>
             </div>
-            <button type="submit" class="btn btn-priamry">저장</button>
+            <button type="submit" class="btn btn-primary">저장</button>
+        </form>
     </div>
     <script>
         document.querySelector("#nick")
